@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.astro/
+out/
+# Real student names/IDs. Only needed locally for `npm run extract` / `npm run template`; the site uses public/template.docx.
+Credit 11-06-2026 (1).docx

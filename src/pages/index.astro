@@ -1,0 +1,1038 @@
+---
+import "../styles/global.css";
+import catalog from "../data/catalog.json";
+---
+
+<!doctype html>
+<html lang="en" class="bg-canvas">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Credit Acceptance Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body
+    class="bg-canvas font-sans text-sm/[1.45] text-gray-900 [color-scheme:light]"
+  >
+    <svg class="hidden" aria-hidden="true">
+      <symbol
+        id="i-arrow"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></symbol
+      >
+      <symbol
+        id="i-plus"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></symbol
+      >
+      <symbol
+        id="i-trash"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"></path></symbol
+      >
+      <symbol
+        id="i-edit"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"
+        ></path></symbol
+      >
+      <symbol
+        id="i-spark"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path
+          d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M6 18l2.5-2.5M15.5 8.5 18 6"
+        ></path></symbol
+      >
+      <symbol
+        id="i-chev"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"><path d="m9 6 6 6-6 6"></path></symbol
+      >
+      <symbol
+        id="i-doc"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8Z"
+        ></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></symbol
+      >
+      <symbol
+        id="i-dl"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        ><path d="M12 4v11M7 10l5 5 5-5M5 20h14"></path></symbol
+      >
+    </svg>
+
+    <header class="sticky top-0 z-10 bg-navy text-white">
+      <div
+        class="mx-auto flex max-w-[1440px] items-center gap-3 px-4 py-3 sm:px-6"
+      >
+        <div
+          class="grid size-[34px] place-items-center rounded-[9px] bg-gradient-to-br from-brand to-emerald-600 text-xs font-bold tracking-wide"
+        >
+          DIU
+        </div>
+        <div>
+          <h1 class="text-[15px] font-semibold">Credit Acceptance AI</h1>
+          <p class="hidden text-xs text-[#a9b4d0] sm:block">
+            Faculty of Science &amp; Information Technology
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <form
+      id="f"
+      novalidate
+      class="mx-auto grid max-w-[1440px] items-start gap-5 p-4 sm:p-6 lg:grid-cols-[minmax(0,1fr)_340px]"
+    >
+      <div class="min-w-0">
+        <section class="card">
+          <div class="card-h">
+            <span class="step">1</span><h2 class="card-title">Student</h2>
+          </div>
+          <div class="grid gap-4 p-5 md:grid-cols-2">
+            <div>
+              <label class="label" for="student_name">Full name</label><input
+                class="field"
+                id="student_name"
+                required
+                autocomplete="off"
+                placeholder="e.g. Md. Shifat Reza Bappa"
+              />
+            </div>
+            <div>
+              <label class="label" for="student_id">Student ID</label><input
+                class="field"
+                id="student_id"
+                required
+                autocomplete="off"
+                placeholder="e.g. 253-35-731"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h">
+            <span class="step">2</span><h2 class="card-title">Transfer</h2><span
+              class="text-[13px] text-gray-500"
+              >Where the courses come from and where they're accepted</span>
+          </div>
+          <div class="p-5">
+            <div class="grid items-end gap-3 md:grid-cols-[1fr_auto_1fr]">
+              <div>
+                <label class="label" for="src_key"
+                  >From (existing department)</label
+                ><select class="field" id="src_key"></select>
+              </div>
+              <div
+                class="grid size-[38px] rotate-90 place-items-center justify-self-center rounded-full bg-brand-soft text-brand md:rotate-0"
+              >
+                <svg class="icon"><use href="#i-arrow"></use></svg>
+              </div>
+              <div>
+                <label class="label" for="tgt_key">To (new department)</label
+                ><select class="field" id="tgt_key"></select>
+              </div>
+            </div>
+            <details
+              class="group mt-[18px] border-t border-dashed border-line-strong pt-3.5"
+            >
+              <summary
+                class="inline-flex cursor-pointer list-none items-center gap-1.5 text-[13px] font-medium text-brand [&::-webkit-details-marker]:hidden"
+              >
+                <svg class="icon transition-transform group-open:rotate-90"
+                  ><use href="#i-chev"></use></svg
+                >Customize certificate text
+              </summary>
+              <div class="mt-3.5 grid gap-4 md:grid-cols-2">
+                <div>
+                  <label class="label" for="src_program">Source program</label
+                  ><input class="field" id="src_program" required />
+                </div>
+                <div>
+                  <label class="label" for="program">New program</label><input
+                    class="field"
+                    id="program"
+                    required
+                  />
+                </div>
+                <div>
+                  <label class="label" for="src_short"
+                    >Source column label</label
+                  ><input class="field" id="src_short" required />
+                </div>
+                <div>
+                  <label class="label" for="tgt_short"
+                    >Target column label</label
+                  ><input class="field" id="tgt_short" required />
+                </div>
+                <div>
+                  <label class="label" for="src_institution"
+                    >Source institution</label
+                  ><input
+                    class="field"
+                    id="src_institution"
+                    value="Daffodil International University"
+                  />
+                </div>
+                <div>
+                  <label class="label" for="tgt_dept"
+                    >Accepting department</label
+                  ><input class="field" id="tgt_dept" required />
+                </div>
+                <div>
+                  <label class="label" for="sign_left">Left signature</label
+                  ><input class="field" id="sign_left" />
+                </div>
+                <div>
+                  <label class="label" for="sign_right">Right signature</label
+                  ><input class="field" id="sign_right" value="Dean, FSIT" />
+                </div>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <section class="card group" id="courses" data-mode="bulk">
+          <div class="card-h">
+            <span class="step">3</span><h2 class="card-title">
+              Course equivalences
+            </h2>
+            <button type="button" class="btn btn-soft ml-auto" id="suggest"
+              ><svg class="icon"><use href="#i-spark"></use></svg>Auto-fill from
+              past certificates</button
+            >
+          </div>
+          <div
+            class="flex flex-wrap items-center gap-3 border-b border-line bg-[#fafbfe] px-5 py-3.5"
+          >
+            <span class="text-[13px] font-medium text-gray-700" id="mm_lbl"
+              >Content matching</span
+            >
+            <div
+              class="inline-flex rounded-[9px] bg-[#eef1f7] p-[3px]"
+              role="radiogroup"
+              aria-labelledby="mm_lbl"
+            >
+              <span
+                ><input
+                  type="radio"
+                  name="mmode"
+                  id="mm_bulk"
+                  value="bulk"
+                  checked
+                  class="peer sr-only"
+                /><label
+                  for="mm_bulk"
+                  class="block cursor-pointer rounded-[7px] px-3 py-1.5 text-[13px] text-gray-500 peer-checked:bg-white peer-checked:text-gray-900 peer-checked:shadow-sm peer-focus-visible:outline-2 peer-focus-visible:outline-brand"
+                  >Same for all courses</label
+                ></span
+              >
+              <span
+                ><input
+                  type="radio"
+                  name="mmode"
+                  id="mm_per"
+                  value="per_course"
+                  class="peer sr-only"
+                /><label
+                  for="mm_per"
+                  class="block cursor-pointer rounded-[7px] px-3 py-1.5 text-[13px] text-gray-500 peer-checked:bg-white peer-checked:text-gray-900 peer-checked:shadow-sm peer-focus-visible:outline-2 peer-focus-visible:outline-brand"
+                  >Per course</label
+                ></span
+              >
+            </div>
+            <input
+              class="field w-[90px] group-data-[mode=per_course]:hidden"
+              id="matching"
+              value="95%"
+              aria-label="Content matching for all courses"
+            />
+            <span
+              class="hidden text-xs text-gray-500 group-data-[mode=per_course]:inline"
+              >Enter a value for each course in the Match column.</span
+            >
+          </div>
+          <div class="overflow-x-auto">
+            <table
+              class="w-full min-w-[980px] border-separate border-spacing-0"
+            >
+              <thead>
+                <tr>
+                  <th class="pl-5"></th>
+                  <!-- group headers: text lines up with the column text below, underline spans exactly the group -->
+                  <th colspan="4" class="border-b-2 border-gray-300 px-1.5 pt-3 pb-1.5 text-left text-xs font-semibold text-gray-700"
+                    ><span id="g_src">From</span></th
+                  >
+                  <th></th>
+                  <th colspan="3" class="border-b-2 border-emerald-500 px-1.5 pt-3 pb-1.5 text-left text-xs font-semibold text-emerald-700"
+                    ><span id="g_tgt">To</span></th
+                  >
+                  <th class="hidden group-data-[mode=per_course]:table-cell"
+                  ></th><th></th>
+                </tr>
+                <tr>
+                  <th class="th pl-5">#</th><th class="th">Code</th><th
+                    class="th">Course title</th
+                  ><th class="th">Credit</th><th class="th">Grade</th><th
+                    class="th"></th>
+                  <th class="th">Code</th><th class="th">Course title</th><th
+                    class="th">Credit</th
+                  >
+                  <th class="th hidden group-data-[mode=per_course]:table-cell"
+                    >Match</th
+                  ><th class="th pr-4"></th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+          <div class="flex flex-wrap items-center gap-3 px-5 py-3.5">
+            <button type="button" class="btn" id="add"
+              ><svg class="icon"><use href="#i-plus"></use></svg>Add course</button
+            >
+            <span class="inline-flex items-center gap-1.5 text-xs text-gray-500"
+              ><i
+                class="size-2.5 rounded-[3px] border border-amber-300 bg-amber-50"
+              ></i>Not in catalog, so fill in manually</span
+            >
+            <div class="ml-auto flex gap-5 text-[13px] text-gray-500">
+              <span
+                >Source <b id="src_total" class="ml-1 text-[15px] text-gray-900"
+                  >0.0</b
+                ></span
+              >
+              <span
+                >Accepted <b
+                  id="tgt_total"
+                  class="ml-1 text-[15px] text-gray-900">0.0</b
+                ></span
+              >
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <aside class="lg:sticky lg:top-[82px]">
+        <section class="card">
+          <div class="card-h"><h2 class="card-title">Summary</h2></div>
+          <div class="p-5">
+            <div class="text-[13px] font-medium text-gray-500">
+              Credits accepted
+            </div>
+            <div class="flex items-baseline gap-1.5">
+              <span class="text-[34px] font-bold tracking-tight" id="s_credits"
+                >0.0</span
+              ><span class="text-gray-500">credits</span>
+            </div>
+            <dl
+              class="my-4 grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 text-[13px] [&_dd]:truncate [&_dd]:text-right [&_dd]:font-medium [&_dt]:text-gray-500"
+            >
+              <dt>Student</dt><dd id="s_name">—</dd>
+              <dt>Courses</dt><dd id="s_courses">0</dd>
+              <dt>Transfer</dt>
+              <dd>
+                <span class="inline-flex items-center gap-1.5">
+                  <span
+                    class="rounded-full bg-[#eef1f7] px-2.5 py-0.5 text-xs text-gray-700"
+                    id="s_src">—</span
+                  ><svg class="icon"><use href="#i-arrow"></use></svg>
+                  <span
+                    class="rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs text-emerald-700"
+                    id="s_tgt">—</span
+                  >
+                </span>
+              </dd>
+              <dt>Matching</dt><dd id="s_match">—</dd>
+            </dl>
+            <div class="grid gap-2">
+              <button class="btn btn-primary h-[42px] w-full" type="submit"
+                ><svg class="icon"><use href="#i-doc"></use></svg>Preview &amp;
+                generate</button
+              >
+              <button type="button" class="btn h-[42px] w-full" id="next"
+                ><svg class="icon"><use href="#i-plus"></use></svg>Save &amp;
+                add another student</button
+              >
+            </div>
+            <div
+              id="status"
+              role="status"
+              data-kind="info"
+              class="mt-3 rounded-lg px-3 py-2.5 text-[13px] empty:hidden data-[kind=error]:bg-red-50 data-[kind=error]:text-red-600 data-[kind=info]:bg-brand-soft data-[kind=info]:text-brand-ink"
+            >
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-h">
+            <h2 class="card-title">Students in this file</h2><span
+              class="ml-auto rounded-full bg-brand-soft px-2.5 py-1 text-xs font-medium text-brand"
+              id="batch_n">0</span>
+          </div>
+          <ol id="batch" class="divide-y divide-line"></ol>
+          <p class="px-5 py-[18px] text-[13px] text-gray-500" id="batch_empty">
+            None saved yet. To put several students in one DOCX/PDF, click <b class="font-medium text-gray-700">Save &amp; add another student</b> after each one. Every student gets their own page.
+          </p>
+        </section>
+      </aside>
+    </form>
+
+    <datalist id="src_dl"></datalist>
+    <datalist id="tgt_dl"></datalist>
+    <datalist id="grades"
+      ><option>A+</option><option>A</option><option>A-</option><option
+        >B+</option
+      ><option>B</option><option>B-</option><option>C+</option><option>C</option
+      ><option>D</option></datalist
+    >
+
+    <template id="row_tpl">
+      <tr class="hover:[&>td]:bg-[#fafbff]">
+        <td class="td idx w-9 pl-5 text-xs text-gray-400"></td>
+        <td class="td w-[118px]"
+          ><input
+            class="field cell"
+            data-k="src_code"
+            list="src_dl"
+            aria-label="Source course code"
+            required
+          /></td
+        >
+        <td class="td"
+          ><input
+            class="field cell"
+            data-k="src_title"
+            aria-label="Source course title"
+            required
+          /></td
+        >
+        <td class="td w-[66px]"
+          ><input
+            class="field cell"
+            data-k="src_credit"
+            inputmode="decimal"
+            aria-label="Source credit"
+            required
+          /></td
+        >
+        <td class="td w-[70px]"
+          ><input
+            class="field cell"
+            data-k="grade"
+            list="grades"
+            aria-label="Grade"
+          /></td
+        >
+        <td class="td w-[26px] text-center text-gray-400"
+          ><svg class="icon inline"><use href="#i-arrow"></use></svg></td
+        >
+        <td class="td w-[118px]"
+          ><input
+            class="field cell"
+            data-k="tgt_code"
+            list="tgt_dl"
+            aria-label="Target course code"
+            required
+          /></td
+        >
+        <td class="td"
+          ><input
+            class="field cell"
+            data-k="tgt_title"
+            aria-label="Target course title"
+            required
+          /></td
+        >
+        <td class="td w-[66px]"
+          ><input
+            class="field cell"
+            data-k="tgt_credit"
+            inputmode="decimal"
+            aria-label="Target credit"
+            required
+          /></td
+        >
+        <td class="td hidden w-[88px] group-data-[mode=per_course]:table-cell"
+          ><input
+            class="field cell"
+            data-k="matching"
+            aria-label="Content matching for this course"
+            placeholder="95%"
+          /></td
+        >
+        <td class="td pr-4"
+          ><button
+            type="button"
+            class="btn btn-icon"
+            data-del
+            aria-label="Remove course"
+            ><svg class="icon"><use href="#i-trash"></use></svg></button
+          ></td
+        >
+      </tr>
+    </template>
+
+    <dialog
+      id="preview"
+      class="m-auto h-[92vh] w-[min(1040px,96vw)] flex-col overflow-hidden rounded-[14px] border-0 p-0 shadow-2xl backdrop:bg-navy/55 open:flex"
+    >
+      <header
+        class="flex flex-wrap items-center gap-2 border-b border-line px-[18px] py-3.5"
+      >
+        <div class="mr-auto">
+          <b class="block text-[15px]">Preview</b><span
+            class="text-xs text-gray-500"
+            >Check it, then download it or go back and edit</span>
+        </div>
+        <a class="btn" id="dl_docx"
+          ><svg class="icon"><use href="#i-dl"></use></svg>DOCX</a
+        >
+        <a class="btn btn-primary" id="dl_pdf"
+          ><svg class="icon"><use href="#i-dl"></use></svg>PDF</a
+        >
+        <button type="button" class="btn" id="close">Back to edit</button>
+      </header>
+      <iframe
+        id="pdf"
+        title="Generated certificate PDF"
+        class="w-full flex-1 border-0 bg-[#525659]"></iframe>
+    </dialog>
+
+    <script
+      is:inline
+      type="application/json"
+      id="catalog"
+      set:html={JSON.stringify(catalog)}
+    />
+
+    <script>
+      import { readZip, type Files } from "../lib/zip.ts";
+      import {
+        buildDocx,
+        validate,
+        type Cert as CertData,
+      } from "../lib/certgen.ts";
+      import { buildPdf, type Logo, type Measure } from "../lib/pdf.ts";
+
+      type Course = { code: string; title: string; credit: number };
+      type Dept = { name: string; program: string; courses: Course[] };
+      type Mapping = {
+        src_dept: string;
+        src: string;
+        tgt_dept: string;
+        tgt: string;
+      };
+      const CAT: { departments: Record<string, Dept>; mappings: Mapping[] } =
+        JSON.parse(document.getElementById("catalog")!.textContent!);
+      const DEPTS = CAT.departments;
+
+      const $ = (id: string) => document.getElementById(id) as any;
+      const all = (sel: string, root: ParentNode = document) => [
+        ...root.querySelectorAll<HTMLInputElement>(sel),
+      ];
+      const norm = (s: string) => {
+        const m = String(s)
+          .trim()
+          .toUpperCase()
+          .match(/^([A-Z]{2,4})\s?-?(\d{3,4})\s?(L?)$/);
+        return m ? `${m[1]} ${m[2]}${m[3]}` : String(s).trim();
+      };
+      const short = (k: string) => k.split("-")[0];
+      const mode = () =>
+        (document.querySelector("[name=mmode]:checked") as HTMLInputElement)
+          .value;
+
+      function find(deptKey: string, code: string) {
+        // selected dept first, then any dept
+        code = norm(code);
+        return (
+          DEPTS[deptKey]?.courses.find((c) => c.code === code) ||
+          Object.values(DEPTS)
+            .flatMap((d) => d.courses)
+            .find((c) => c.code === code)
+        );
+      }
+
+      function fillDatalist(dl: HTMLElement, key: string) {
+        dl.replaceChildren(
+          ...(DEPTS[key]?.courses || []).map(
+            (c) => new Option(`${c.title} (${c.credit.toFixed(1)})`, c.code),
+          ),
+        );
+      }
+
+      function setDept(side: "src" | "tgt") {
+        const key = $(side + "_key").value,
+          d = DEPTS[key];
+        fillDatalist($(side + "_dl"), key);
+        $(side + "_short").value = short(key);
+        if (side === "src") $("src_program").value = d.program;
+        else {
+          $("tgt_dept").value = d.name.replace(/ \(.*\)$/, "");
+          $("program").value = d.program;
+          $("sign_left").value = `Head, ${short(key)}`;
+        }
+        headers();
+      }
+
+      function headers() {
+        $("g_src").textContent = `From ${$("src_short").value}`;
+        $("g_tgt").textContent = `To ${$("tgt_short").value}`;
+        summary();
+      }
+
+      function fillSide(tr: HTMLElement, side: "src" | "tgt", code: string) {
+        const c = find($(side + "_key").value, code);
+        const get = (k: string) =>
+          tr.querySelector(`[data-k=${side}_${k}]`) as HTMLInputElement;
+        get("code").value = c ? c.code : code;
+        if (c) {
+          get("title").value = c.title;
+          get("credit").value = c.credit.toFixed(1);
+        }
+        get("code").toggleAttribute("data-unknown", !c);
+        return c;
+      }
+
+      function addRow(src = "", tgt = "") {
+        const tr = (
+          $("row_tpl") as HTMLTemplateElement
+        ).content.firstElementChild!.cloneNode(true) as HTMLElement;
+        $("rows").append(tr);
+        if (src) fillSide(tr, "src", src);
+        if (tgt) fillSide(tr, "tgt", tgt);
+        if (mode() === "per_course")
+          (tr.querySelector("[data-k=matching]") as HTMLInputElement).value =
+            $("matching").value;
+        totals();
+        return tr;
+      }
+
+      const knownTarget = (src: string) =>
+        CAT.mappings.find(
+          (m) =>
+            m.src === norm(src) && m.tgt_dept === short($("tgt_key").value),
+        )?.tgt;
+
+      $("rows").addEventListener("change", (e: Event) => {
+        const el = e.target as HTMLInputElement,
+          tr = el.closest("tr")!,
+          k = el.dataset.k;
+        if (k === "src_code" && el.value) {
+          fillSide(tr, "src", el.value);
+          const t = knownTarget(el.value),
+            tc = tr.querySelector("[data-k=tgt_code]") as HTMLInputElement;
+          if (t && !tc.value) fillSide(tr, "tgt", t);
+        }
+        if (k === "tgt_code" && el.value) fillSide(tr, "tgt", el.value);
+        totals();
+      });
+      $("rows").addEventListener("input", totals);
+      $("rows").addEventListener("click", (e: Event) => {
+        const b = (e.target as Element).closest("[data-del]");
+        if (b) {
+          b.closest("tr")!.remove();
+          totals();
+        }
+      });
+
+      function totals() {
+        for (const s of ["src", "tgt"])
+          $(s + "_total").textContent = all(`[data-k=${s}_credit]`)
+            .reduce((a, i) => a + (parseFloat(i.value) || 0), 0)
+            .toFixed(1);
+        all("#rows tr").forEach(
+          (tr, i) => (tr.querySelector(".idx")!.textContent = String(i + 1)),
+        );
+        summary();
+      }
+
+      function summary() {
+        $("s_credits").textContent = $("tgt_total").textContent;
+        $("s_name").textContent = $("student_name").value.trim() || "—";
+        $("s_courses").textContent = all("[data-k=src_code]").filter((i) =>
+          i.value.trim(),
+        ).length;
+        $("s_src").textContent = $("src_short").value || "—";
+        $("s_tgt").textContent = $("tgt_short").value || "—";
+        $("s_match").textContent =
+          mode() === "bulk" ? $("matching").value || "—" : "Per course";
+      }
+
+      function setMode(m: string) {
+        (
+          document.querySelector(`[name=mmode][value=${m}]`) as HTMLInputElement
+        ).checked = true;
+        $("courses").dataset.mode = m;
+        // switching to per-course: seed blank rows with the bulk value so nothing starts empty
+        if (m === "per_course")
+          all("[data-k=matching]").forEach((i) => {
+            if (!i.value) i.value = $("matching").value;
+          });
+        summary();
+      }
+      all("[name=mmode]").forEach((r) =>
+        r.addEventListener("change", () => setMode(r.value)),
+      );
+      ["student_name", "matching"].forEach((id) =>
+        $(id).addEventListener("input", summary),
+      );
+
+      $("add").onclick = () => addRow().querySelector("input")!.focus();
+      $("suggest").onclick = () => {
+        const have = new Set(
+          all("[data-k=src_code]").map((i) => norm(i.value)),
+        );
+        const found = CAT.mappings.filter(
+          (m) =>
+            m.src_dept === short($("src_key").value) &&
+            m.tgt_dept === short($("tgt_key").value) &&
+            !have.has(m.src),
+        );
+        // drop the empty starter row, if that's all there is
+        all("#rows tr").forEach((tr) => {
+          if (
+            !all("input", tr).some((i) => i.value && i.dataset.k !== "matching")
+          )
+            tr.remove();
+        });
+        found.forEach((m) => addRow(m.src, m.tgt));
+        status(
+          found.length
+            ? `Added ${found.length} course${found.length > 1 ? "s" : ""} from past certificates.`
+            : "No past certificates for this department pair yet.",
+        );
+      };
+      ["src_short", "tgt_short"].forEach((id) =>
+        $(id).addEventListener("input", headers),
+      );
+      (["src", "tgt"] as const).forEach((s) =>
+        $(s + "_key").addEventListener("change", () => setDept(s)),
+      );
+
+      function status(msg: string, kind: "info" | "error" = "info") {
+        $("status").textContent = msg;
+        $("status").dataset.kind = kind;
+      }
+
+      const FIELDS = [
+        "student_name",
+        "student_id",
+        "program",
+        "src_key",
+        "src_short",
+        "src_program",
+        "src_institution",
+        "tgt_key",
+        "tgt_short",
+        "tgt_dept",
+        "matching",
+        "sign_left",
+        "sign_right",
+      ];
+      type Cert = Record<string, any> & { rows: Record<string, string>[] };
+      const BATCH: Cert[] = [];
+      const formEmpty = () =>
+        !$("student_name").value.trim() &&
+        !all("#rows input").some(
+          (i) => i.value.trim() && i.dataset.k !== "matching",
+        );
+
+      function readForm(): Cert {
+        const cert: Cert = {
+          ...Object.fromEntries(FIELDS.map((k) => [k, $(k).value.trim()])),
+          matching_mode: mode(),
+          rows: [],
+        };
+        cert.rows = all("#rows tr").map((tr) =>
+          Object.fromEntries(
+            all("[data-k]", tr).map((i) => [i.dataset.k!, i.value.trim()]),
+          ),
+        );
+        return cert;
+      }
+
+      function loadForm(c: Cert) {
+        $("src_key").value = c.src_key;
+        $("tgt_key").value = c.tgt_key;
+        fillDatalist($("src_dl"), c.src_key);
+        fillDatalist($("tgt_dl"), c.tgt_key);
+        FIELDS.forEach((k) => ($(k).value = c[k] ?? ""));
+        setMode(c.matching_mode || "bulk");
+        $("rows").replaceChildren();
+        c.rows.forEach((r) =>
+          all("[data-k]", addRow()).forEach(
+            (i) => (i.value = r[i.dataset.k!] ?? ""),
+          ),
+        );
+        headers();
+        totals();
+      }
+
+      function clearStudent() {
+        $("student_name").value = $("student_id").value = "";
+        $("rows").replaceChildren();
+        addRow();
+        totals();
+      }
+
+      const initials = (n: string) =>
+        n
+          .split(/[\s,.]+/)
+          .filter(Boolean)
+          .slice(0, 2)
+          .map((w) => w[0].toUpperCase())
+          .join("");
+      const el = (tag: string, className: string, text = "") =>
+        Object.assign(document.createElement(tag), {
+          className,
+          textContent: text,
+        });
+      function iconBtn(icon: string, extra: string, label: string) {
+        const b = el("button", `btn btn-icon ${extra}`) as HTMLButtonElement;
+        b.type = "button";
+        b.innerHTML = `<svg class="icon"><use href="#i-${icon}"/></svg>`;
+        b.setAttribute("aria-label", label);
+        return b;
+      }
+
+      function renderBatch() {
+        $("batch_n").textContent = BATCH.length;
+        $("batch_empty").hidden = BATCH.length > 0;
+        $("batch").replaceChildren(
+          ...BATCH.map((c, i) => {
+            const li = el("li", "flex items-center gap-2.5 px-5 py-2.5");
+            const total = c.rows
+              .reduce((a, r) => a + (parseFloat(r.tgt_credit) || 0), 0)
+              .toFixed(1);
+            const who = el("div", "min-w-0 flex-1");
+            who.append(
+              el("b", "block truncate font-semibold", c.student_name),
+              el(
+                "span",
+                "text-xs text-gray-500",
+                `${c.src_short} → ${c.tgt_short} · ${c.rows.length} courses · ${total} cr`,
+              ),
+            );
+            const edit = iconBtn(
+                "edit",
+                "hover:bg-brand-soft hover:text-brand",
+                `Edit ${c.student_name}`,
+              ),
+              del = iconBtn("trash", "", `Remove ${c.student_name}`);
+            edit.onclick = () => {
+              if (
+                !formEmpty() &&
+                !confirm(
+                  "Replace what is in the form now? Unsaved changes will be lost.",
+                )
+              )
+                return;
+              loadForm(BATCH.splice(i, 1)[0]);
+              renderBatch();
+              $("student_name").focus();
+            };
+            del.onclick = () => {
+              if (confirm(`Remove ${c.student_name}?`)) {
+                BATCH.splice(i, 1);
+                renderBatch();
+              }
+            };
+            li.append(
+              el(
+                "span",
+                "grid size-8 flex-none place-items-center rounded-full bg-brand-soft text-xs font-semibold text-brand",
+                initials(c.student_name),
+              ),
+              who,
+              edit,
+              del,
+            );
+            return li;
+          }),
+        );
+      }
+
+      $("next").onclick = () => {
+        if (!$("f").checkValidity()) {
+          $("f").reportValidity();
+          return;
+        }
+        BATCH.push(readForm());
+        renderBatch();
+        clearStudent();
+        status("");
+        $("student_name").focus();
+      };
+
+      // everything below runs in the browser: template -> DOCX, same data -> PDF, nothing leaves the page
+      let template: Promise<{ files: Files; logo: Logo }> | null = null;
+      const loadTemplate = () =>
+        (template ??= (async () => {
+          const res = await fetch(
+            `${import.meta.env.BASE_URL.replace(/\/?$/, "/")}template.docx`,
+          );
+          if (!res.ok)
+            throw new Error(
+              `Could not load the certificate template (${res.status}).`,
+            );
+          const files = await readZip(await res.arrayBuffer());
+          // logo PNG -> JPEG on white, so the PDF can embed it without a PNG decoder
+          const img = await createImageBitmap(
+            new Blob([files.get("word/media/image1.png")! as BlobPart], {
+              type: "image/png",
+            }),
+          );
+          const canvas = Object.assign(document.createElement("canvas"), {
+            width: img.width,
+            height: img.height,
+          });
+          const ctx = canvas.getContext("2d")!;
+          ctx.fillStyle = "#fff";
+          ctx.fillRect(0, 0, img.width, img.height);
+          ctx.drawImage(img, 0, 0);
+          const jpeg = new Uint8Array(
+            await (
+              await new Promise<Blob>((r) =>
+                canvas.toBlob((b) => r(b!), "image/jpeg", 0.92),
+              )
+            ).arrayBuffer(),
+          );
+          return {
+            files,
+            logo: { jpeg, width: img.width, height: img.height },
+          };
+        })().catch((e) => {
+          template = null;
+          throw e;
+        }));
+
+      const measureCtx = document.createElement("canvas").getContext("2d")!;
+      const measure: Measure = (text, bold, size) => {
+        measureCtx.font = `${bold ? "bold " : ""}${size}px "Times New Roman", Times, "Liberation Serif", "Nimbus Roman", serif`;
+        return measureCtx.measureText(text).width;
+      };
+
+      let urls: string[] = [];
+
+      $("f").addEventListener("submit", async (e: Event) => {
+        e.preventDefault();
+        const certs = [...BATCH];
+        if (!formEmpty() || !certs.length) {
+          // include the certificate currently in the form
+          if (!$("f").checkValidity()) {
+            $("f").reportValidity();
+            return;
+          }
+          certs.push(readForm());
+        }
+        const errors = certs.flatMap((c, i) =>
+          validate(c as CertData).map((e) =>
+            certs.length > 1
+              ? `${c.student_name || "certificate " + (i + 1)}: ${e}`
+              : e,
+          ),
+        );
+        if (errors.length) {
+          status("Missing/invalid: " + errors.join(", "), "error");
+          return;
+        }
+        status(
+          `Generating ${certs.length} certificate${certs.length > 1 ? "s" : ""}…`,
+        );
+        try {
+          const { files, logo } = await loadTemplate();
+          await document.fonts.load('12px "Times New Roman"').catch(() => {});
+          const docx = buildDocx(certs as CertData[], files),
+            pdf = buildPdf(certs as CertData[], measure, logo);
+          const label =
+            certs.length === 1
+              ? `${certs[0].student_id}_${certs[0].student_name}`
+              : `${certs.length}_students`;
+          const name = `credit_${label}`
+            .replace(/[^A-Za-z0-9-]+/g, "_")
+            .slice(0, 80);
+          status("");
+          urls.forEach(URL.revokeObjectURL);
+          urls = [
+            URL.createObjectURL(
+              new Blob([docx as BlobPart], {
+                type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+              }),
+            ),
+            URL.createObjectURL(
+              new Blob([pdf as BlobPart], { type: "application/pdf" }),
+            ),
+          ];
+          Object.assign($("dl_docx"), {
+            href: urls[0],
+            download: `${name}.docx`,
+          });
+          Object.assign($("dl_pdf"), {
+            href: urls[1],
+            download: `${name}.pdf`,
+          });
+          $("pdf").src = urls[1];
+          $("preview").showModal();
+        } catch (err) {
+          status((err as Error).message, "error");
+        }
+      });
+      $("close").onclick = () => $("preview").close();
+
+      for (const s of ["src", "tgt"])
+        $(s + "_key").replaceChildren(
+          ...Object.entries(DEPTS).map(
+            ([k, d]) => new Option(`${k} · ${d.name}`, k),
+          ),
+        );
+      $("src_key").value = "ICE";
+      $("tgt_key").value = "SWE";
+      setDept("src");
+      setDept("tgt");
+      addRow();
+      renderBatch();
+    </script>
+  </body>
+</html>

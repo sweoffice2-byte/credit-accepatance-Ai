@@ -1,0 +1,2203 @@
+{
+ "departments": {
+  "SWE": {
+   "name": "Software Engineering",
+   "program": "B.Sc. in Software Engineering",
+   "courses": [
+    {
+     "code": "AOL 101",
+     "title": "Art Of Living",
+     "credit": 3
+    },
+    {
+     "code": "BNS 101",
+     "title": "Bangladesh Studies",
+     "credit": 3
+    },
+    {
+     "code": "CS 211",
+     "title": "Cyber Security Fundamentals",
+     "credit": 3
+    },
+    {
+     "code": "CS 334",
+     "title": "Ethical Hacking and Countermeasure",
+     "credit": 1
+    },
+    {
+     "code": "CS 335",
+     "title": "Ethical Hacking and Countermeasure LAB",
+     "credit": 2
+    },
+    {
+     "code": "CS 418",
+     "title": "Network & Communication Security",
+     "credit": 3
+    },
+    {
+     "code": "CS 422",
+     "title": "Digital Forensics",
+     "credit": 3
+    },
+    {
+     "code": "CS 439",
+     "title": "Final Year Project/Thesis/Internship",
+     "credit": 6
+    },
+    {
+     "code": "DS 331",
+     "title": "Introduction to Data Science and Data Management & Analysis",
+     "credit": 2
+    },
+    {
+     "code": "DS 332",
+     "title": "Introduction to Data Science and Data Management & Analysis",
+     "credit": 1
+    },
+    {
+     "code": "DS 411",
+     "title": "Statistical Data Analysis",
+     "credit": 2
+    },
+    {
+     "code": "DS 412",
+     "title": "Statistical Data Analysis Lab",
+     "credit": 1
+    },
+    {
+     "code": "DS 421",
+     "title": "Machine Learning Driven Data Analysis I",
+     "credit": 2
+    },
+    {
+     "code": "DS 422",
+     "title": "Machine Learning Driven Data Analysis Lab",
+     "credit": 1
+    },
+    {
+     "code": "DS 423",
+     "title": "Machine Learning Driven Data Analysis II and Communicating",
+     "credit": 2
+    },
+    {
+     "code": "DS 424",
+     "title": "Machine Learning Driven Data Analysis II and Communication",
+     "credit": 1
+    },
+    {
+     "code": "DS 431",
+     "title": "Final Year Project/Thesis/Internship",
+     "credit": 6
+    },
+    {
+     "code": "EMP 101",
+     "title": "Employability 360",
+     "credit": 3
+    },
+    {
+     "code": "ENG 101",
+     "title": "ENGLISH I/English Reading, Writing & Public Speaking",
+     "credit": 3
+    },
+    {
+     "code": "GE 235",
+     "title": "Principles of Accounting, Business and Economics",
+     "credit": 3
+    },
+    {
+     "code": "GE 324",
+     "title": "Business Analysis and Communication",
+     "credit": 3
+    },
+    {
+     "code": "GED 104",
+     "title": "ENGLISH I/English Reading, Writing & Public Speaking",
+     "credit": 3
+    },
+    {
+     "code": "GED 239",
+     "title": "Statistics I / Probability & Statistics in Software Engineering",
+     "credit": 3
+    },
+    {
+     "code": "GED 323",
+     "title": "Software Architecture & Design",
+     "credit": 3
+    },
+    {
+     "code": "GED 347",
+     "title": "Research Methodology & Scientific Writing",
+     "credit": 3
+    },
+    {
+     "code": "GEDS 237",
+     "title": "Entrepreneurship in IT Business",
+     "credit": 3
+    },
+    {
+     "code": "GEDS 347",
+     "title": "Management Information System",
+     "credit": 3
+    },
+    {
+     "code": "GEDS 415",
+     "title": "Software Project Management & Documentation",
+     "credit": 3
+    },
+    {
+     "code": "GEDS 416",
+     "title": "AI for Strategic Decision Making",
+     "credit": 3
+    },
+    {
+     "code": "MAT 101",
+     "title": "Mathematics-I",
+     "credit": 3
+    },
+    {
+     "code": "MAT 102",
+     "title": "Mathematics II",
+     "credit": 3
+    },
+    {
+     "code": "PHY 101",
+     "title": "Physics I",
+     "credit": 3
+    },
+    {
+     "code": "RE 331",
+     "title": "Embedded Programming",
+     "credit": 2
+    },
+    {
+     "code": "RE 332",
+     "title": "Embedded Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "RE 411",
+     "title": "Embedded System Design and Development",
+     "credit": 2
+    },
+    {
+     "code": "RE 412",
+     "title": "Embedded System Design and Development Lab",
+     "credit": 1
+    },
+    {
+     "code": "RE 421",
+     "title": "Robotic Process Automation Design & Development",
+     "credit": 2
+    },
+    {
+     "code": "RE 422",
+     "title": "Robotic Process Automation Design & Development Lab",
+     "credit": 1
+    },
+    {
+     "code": "RE 423",
+     "title": "Advanced Robotics",
+     "credit": 2
+    },
+    {
+     "code": "RE 424",
+     "title": "Advanced Robotics Lab",
+     "credit": 1
+    },
+    {
+     "code": "RE 431",
+     "title": "Final Year Project/Thesis/Internship",
+     "credit": 6
+    },
+    {
+     "code": "SE 111",
+     "title": "Computer Fundamentals",
+     "credit": 3
+    },
+    {
+     "code": "SE 112",
+     "title": "Computer Fundamentals Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 113",
+     "title": "Introduction to Software Engineering",
+     "credit": 3
+    },
+    {
+     "code": "SE 121",
+     "title": "Structured Programming",
+     "credit": 3
+    },
+    {
+     "code": "SE 122",
+     "title": "Structured Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 123",
+     "title": "Discrete Mathematics",
+     "credit": 3
+    },
+    {
+     "code": "SE 131",
+     "title": "Data Structure",
+     "credit": 3
+    },
+    {
+     "code": "SE 132",
+     "title": "Data Structure Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 133",
+     "title": "Software Development Capstone Project",
+     "credit": 3
+    },
+    {
+     "code": "SE 211",
+     "title": "Object Oriented Concepts",
+     "credit": 3
+    },
+    {
+     "code": "SE 212",
+     "title": "Software Requirements Specification & Analysis",
+     "credit": 3
+    },
+    {
+     "code": "SE 213",
+     "title": "Digital Electronics & Logic Design",
+     "credit": 3
+    },
+    {
+     "code": "SE 214",
+     "title": "Algorithm Design & Analysis",
+     "credit": 3
+    },
+    {
+     "code": "SE 215",
+     "title": "Algorithm Design and Analysis Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 216",
+     "title": "Object Oriented Programming",
+     "credit": 3
+    },
+    {
+     "code": "SE 217",
+     "title": "Object Oriented Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 221",
+     "title": "Object Oriented Design",
+     "credit": 3
+    },
+    {
+     "code": "SE 222",
+     "title": "Computer Architecture",
+     "credit": 3
+    },
+    {
+     "code": "SE 223",
+     "title": "Database System",
+     "credit": 3
+    },
+    {
+     "code": "SE 224",
+     "title": "Database Systems Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 225",
+     "title": "Data Communication and Computer Networking",
+     "credit": 3
+    },
+    {
+     "code": "SE 226",
+     "title": "Data Communication and Networking Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 231",
+     "title": "System Analysis & Design Capstone Project",
+     "credit": 3
+    },
+    {
+     "code": "SE 232",
+     "title": "Operating System and System Programming",
+     "credit": 3
+    },
+    {
+     "code": "SE 233",
+     "title": "Operating System & System Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 234",
+     "title": "Theory of Computing",
+     "credit": 3
+    },
+    {
+     "code": "SE 235",
+     "title": "Desktop & Web Programming",
+     "credit": 3
+    },
+    {
+     "code": "SE 236",
+     "title": "Desktop & Web Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 311",
+     "title": "Design Pattern",
+     "credit": 3
+    },
+    {
+     "code": "SE 312",
+     "title": "Software Quality Assurance & Testing",
+     "credit": 3
+    },
+    {
+     "code": "SE 313",
+     "title": "Software Quality Assurance & Testing Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 321",
+     "title": "Software Engineering Web Application",
+     "credit": 3
+    },
+    {
+     "code": "SE 322",
+     "title": "Software Engineering Web Application Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 323",
+     "title": "Software Architecture & Design",
+     "credit": 3
+    },
+    {
+     "code": "SE 331",
+     "title": "Software Engineering Design Capstone Project",
+     "credit": 3
+    },
+    {
+     "code": "SE 332",
+     "title": "Information System Security",
+     "credit": 3
+    },
+    {
+     "code": "SE 333",
+     "title": "Artificial Intelligence",
+     "credit": 3
+    },
+    {
+     "code": "SE 334",
+     "title": "Artificial Intelligence Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 341",
+     "title": "Numerical Analysis",
+     "credit": 3
+    },
+    {
+     "code": "SE 342",
+     "title": "Compiler Design",
+     "credit": 3
+    },
+    {
+     "code": "SE 343",
+     "title": "Software Maintenance",
+     "credit": 3
+    },
+    {
+     "code": "SE 344",
+     "title": "Distributed Systems and Cloud Computing",
+     "credit": 3
+    },
+    {
+     "code": "SE 345",
+     "title": "AI System & Application Development",
+     "credit": 3
+    },
+    {
+     "code": "SE 346",
+     "title": "AI Systems & Application Development Lab",
+     "credit": 1
+    },
+    {
+     "code": "SE 411",
+     "title": "Software Project Management & Documentation",
+     "credit": 3
+    },
+    {
+     "code": "SE 422",
+     "title": "Report, Oral , Presentation and Viva",
+     "credit": 5
+    },
+    {
+     "code": "SE 431",
+     "title": "Final Year Project/Thesis/Internship",
+     "credit": 6
+    },
+    {
+     "code": "SE 442",
+     "title": "Management Information System",
+     "credit": 3
+    },
+    {
+     "code": "SE 444",
+     "title": "Data Warehouse and Data Mining",
+     "credit": 3
+    },
+    {
+     "code": "SE 447",
+     "title": "Human Computer Interaction",
+     "credit": 3
+    },
+    {
+     "code": "SE 532",
+     "title": "Introduction to Robotics",
+     "credit": 3
+    },
+    {
+     "code": "SE 544",
+     "title": "Introduction to Machine Learning",
+     "credit": 3
+    },
+    {
+     "code": "SE 599",
+     "title": "Research Methodology & Scientific Writing",
+     "credit": 3
+    },
+    {
+     "code": "ST 411",
+     "title": "Agile Testing",
+     "credit": 2
+    },
+    {
+     "code": "ST 412",
+     "title": "Agile Testing Lab",
+     "credit": 1
+    },
+    {
+     "code": "ST 413",
+     "title": "Test Automation & Test Management",
+     "credit": 2
+    },
+    {
+     "code": "ST 414",
+     "title": "Test Automation & Test Management Lab",
+     "credit": 1
+    },
+    {
+     "code": "ST 421",
+     "title": "Testing with Generative AI",
+     "credit": 2
+    },
+    {
+     "code": "ST 422",
+     "title": "Testing with Generative AI Lab",
+     "credit": 1
+    },
+    {
+     "code": "ST 423",
+     "title": "Software Performance Engineering & Security Testing",
+     "credit": 2
+    },
+    {
+     "code": "ST 424",
+     "title": "Software Performance Engineering & Security Testing Lab",
+     "credit": 1
+    },
+    {
+     "code": "ST 431",
+     "title": "Final Year Project/Thesis/Internship",
+     "credit": 6
+    },
+    {
+     "code": "STA 101",
+     "title": "Statistics I / Probability & Statistics in Software Engineering",
+     "credit": 3
+    }
+   ]
+  },
+  "SWE-OLD": {
+   "name": "Software Engineering (2010-2020 curriculum)",
+   "program": "B.Sc. in Software Engineering",
+   "courses": [
+    {
+     "code": "ACC 124",
+     "title": "Principle of Accounting / SWE435: Business",
+     "credit": 3
+    },
+    {
+     "code": "ENG 123",
+     "title": "English Language",
+     "credit": 3
+    },
+    {
+     "code": "MAT 113",
+     "title": "Mathematics-I (Calculus and Differential Equations)",
+     "credit": 3
+    },
+    {
+     "code": "MAT 221",
+     "title": "Mathematics-II",
+     "credit": 3
+    },
+    {
+     "code": "PHY 114",
+     "title": "Physics with Lab",
+     "credit": 4
+    },
+    {
+     "code": "STA 134",
+     "title": "Statistics & Probabilities",
+     "credit": 3
+    },
+    {
+     "code": "SWE 111",
+     "title": "Introduction to Software Engineering",
+     "credit": 3
+    },
+    {
+     "code": "SWE 112",
+     "title": "Computer Fundamentals with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 121",
+     "title": "Software Requirement Analysis and Design",
+     "credit": 3
+    },
+    {
+     "code": "SWE 122",
+     "title": "Programming Language with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 131",
+     "title": "Documentation of Software Engineering",
+     "credit": 3
+    },
+    {
+     "code": "SWE 132",
+     "title": "Java Programming with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 133",
+     "title": "Data Structure with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 211",
+     "title": "Introduction to Database with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 212",
+     "title": "Software Project Management",
+     "credit": 3
+    },
+    {
+     "code": "SWE 213",
+     "title": "Computer Algorithms with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 222",
+     "title": "Software Engineering Quality Assurance & Testing",
+     "credit": 3
+    },
+    {
+     "code": "SWE 223",
+     "title": "Digital Electronics with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 224",
+     "title": "Discrete Mathematics",
+     "credit": 3
+    },
+    {
+     "code": "SWE 231",
+     "title": "Software Engineering Project-I",
+     "credit": 3
+    },
+    {
+     "code": "SWE 232",
+     "title": "Operating System with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 233",
+     "title": "Object Oriented Concept & Design with lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 311",
+     "title": "Computer Architecture & Organization",
+     "credit": 3
+    },
+    {
+     "code": "SWE 312",
+     "title": "Theory of Computing",
+     "credit": 3
+    },
+    {
+     "code": "SWE 313",
+     "title": "Net Programming with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 321",
+     "title": "Data Communication with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 322",
+     "title": "Software Security",
+     "credit": 3
+    },
+    {
+     "code": "SWE 323",
+     "title": "System Analysis and Design",
+     "credit": 3
+    },
+    {
+     "code": "SWE 331",
+     "title": "Object Oriented Software Development",
+     "credit": 3
+    },
+    {
+     "code": "SWE 332",
+     "title": "Software Engineering Project II (Web",
+     "credit": 3
+    },
+    {
+     "code": "SWE 333",
+     "title": "Desktop and Web Programming with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 412",
+     "title": "Management Information System",
+     "credit": 3
+    },
+    {
+     "code": "SWE 413",
+     "title": "Software Engineering and Cyber Laws",
+     "credit": 3
+    },
+    {
+     "code": "SWE 421",
+     "title": "Multimedia Programming with Lab / SWE411",
+     "credit": 4
+    },
+    {
+     "code": "SWE 422",
+     "title": "Numerical Analysis with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 423",
+     "title": "Advance Database Management System with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 424",
+     "title": "Artificial Intelligence with lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 425",
+     "title": "Telecommunication Engineering with Lab",
+     "credit": 4
+    },
+    {
+     "code": "SWE 439",
+     "title": "Project/Thesis",
+     "credit": 3
+    }
+   ]
+  },
+  "CSE": {
+   "name": "Computer Science and Engineering",
+   "program": "B.Sc. in Computer Science and Engineering",
+   "courses": [
+    {
+     "code": "ACT 327",
+     "title": "Financial and Managerial Accounting",
+     "credit": 3
+    },
+    {
+     "code": "AOL 101",
+     "title": "Art of Living",
+     "credit": 3
+    },
+    {
+     "code": "BNS 101",
+     "title": "Bangladesh Studies",
+     "credit": 3
+    },
+    {
+     "code": "CSE 112",
+     "title": "Computer Fundamentals",
+     "credit": 3
+    },
+    {
+     "code": "CSE 113",
+     "title": "Programming and Problem Solving",
+     "credit": 3
+    },
+    {
+     "code": "CSE 114",
+     "title": "Programming and Problem-Solving Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 115",
+     "title": "Introduction to Biology & Chemistry for Computation",
+     "credit": 3
+    },
+    {
+     "code": "CSE 121",
+     "title": "Electrical Circuits",
+     "credit": 3
+    },
+    {
+     "code": "CSE 122",
+     "title": "Electrical Circuits Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 123",
+     "title": "Data Structure",
+     "credit": 3
+    },
+    {
+     "code": "CSE 124",
+     "title": "Data Structure Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 212",
+     "title": "Discrete Mathematics",
+     "credit": 3
+    },
+    {
+     "code": "CSE 213",
+     "title": "Algorithms",
+     "credit": 3
+    },
+    {
+     "code": "CSE 214",
+     "title": "Algorithms Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 215",
+     "title": "Electronic Devices and Circuits",
+     "credit": 3
+    },
+    {
+     "code": "CSE 216",
+     "title": "Electronic Devices and Circuits Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 221",
+     "title": "Object Oriented Programming",
+     "credit": 3
+    },
+    {
+     "code": "CSE 222",
+     "title": "Object Oriented Programming Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 223",
+     "title": "Digital Logic Design",
+     "credit": 3
+    },
+    {
+     "code": "CSE 224",
+     "title": "Digital Logic Design Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 225",
+     "title": "Data Communication",
+     "credit": 3
+    },
+    {
+     "code": "CSE 226",
+     "title": "Numerical Methods",
+     "credit": 3
+    },
+    {
+     "code": "CSE 227",
+     "title": "Systems Analysis and Design",
+     "credit": 3
+    },
+    {
+     "code": "CSE 228",
+     "title": "Theory of Computation",
+     "credit": 3
+    },
+    {
+     "code": "CSE 311",
+     "title": "Database Management System",
+     "credit": 3
+    },
+    {
+     "code": "CSE 312",
+     "title": "Database Management System Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 313",
+     "title": "Compiler Design",
+     "credit": 3
+    },
+    {
+     "code": "CSE 314",
+     "title": "Compiler Design Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 315",
+     "title": "Software Engineering",
+     "credit": 3
+    },
+    {
+     "code": "CSE 316",
+     "title": "Artificial Intelligence",
+     "credit": 3
+    },
+    {
+     "code": "CSE 317",
+     "title": "Microprocessor and Microcontrollers",
+     "credit": 3
+    },
+    {
+     "code": "CSE 321",
+     "title": "Computer Networks",
+     "credit": 3
+    },
+    {
+     "code": "CSE 322",
+     "title": "Computer Networks Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 323",
+     "title": "Operating Systems",
+     "credit": 3
+    },
+    {
+     "code": "CSE 324",
+     "title": "Operating Systems Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 325",
+     "title": "Instrumentation and Control",
+     "credit": 3
+    },
+    {
+     "code": "CSE 326",
+     "title": "Social and Professional Issues in Computing",
+     "credit": 3
+    },
+    {
+     "code": "CSE 411",
+     "title": "Computer Graphics",
+     "credit": 3
+    },
+    {
+     "code": "CSE 412",
+     "title": "Computer Graphics Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "CSE 413",
+     "title": "Computer Architecture and Organization",
+     "credit": 3
+    },
+    {
+     "code": "CSE 441",
+     "title": "UI and UX Design",
+     "credit": 3
+    },
+    {
+     "code": "CSE 442",
+     "title": "Software Quality Assurance",
+     "credit": 3
+    },
+    {
+     "code": "CSE 443",
+     "title": "Web Computing",
+     "credit": 3
+    },
+    {
+     "code": "CSE 444",
+     "title": "Software Architecture and Design Pattern",
+     "credit": 3
+    },
+    {
+     "code": "CSE 445",
+     "title": "Intellectual Property and Contract Law",
+     "credit": 3
+    },
+    {
+     "code": "CSE 446",
+     "title": "Mobile Applications Development",
+     "credit": 3
+    },
+    {
+     "code": "CSE 447",
+     "title": "Concurrent and Distributed Programming",
+     "credit": 3
+    },
+    {
+     "code": "CSE 448",
+     "title": "Virtual Reality and 3D Games",
+     "credit": 3
+    },
+    {
+     "code": "CSE 451",
+     "title": "Cloud Computing and Services",
+     "credit": 3
+    },
+    {
+     "code": "CSE 452",
+     "title": "Optical Fiber Communication",
+     "credit": 3
+    },
+    {
+     "code": "CSE 453",
+     "title": "Wireless Sensor Network",
+     "credit": 3
+    },
+    {
+     "code": "CSE 454",
+     "title": "Cyber Security and Forensics",
+     "credit": 3
+    },
+    {
+     "code": "CSE 455",
+     "title": "High Performance Computing",
+     "credit": 3
+    },
+    {
+     "code": "CSE 456",
+     "title": "Network Programming",
+     "credit": 3
+    },
+    {
+     "code": "CSE 457",
+     "title": "Wireless and Cellular Communication",
+     "credit": 3
+    },
+    {
+     "code": "CSE 461",
+     "title": "Algorithm Engineering",
+     "credit": 3
+    },
+    {
+     "code": "CSE 462",
+     "title": "Computational Complexity",
+     "credit": 3
+    },
+    {
+     "code": "CSE 463",
+     "title": "Advanced Algorithms",
+     "credit": 3
+    },
+    {
+     "code": "CSE 464",
+     "title": "Basic Graph Theory",
+     "credit": 3
+    },
+    {
+     "code": "CSE 465",
+     "title": "Algorithmic Game Theory",
+     "credit": 3
+    },
+    {
+     "code": "CSE 466",
+     "title": "Bioinformatics Algorithm",
+     "credit": 3
+    },
+    {
+     "code": "CSE 467",
+     "title": "Algorithm for distributed computation",
+     "credit": 3
+    },
+    {
+     "code": "CSE 471",
+     "title": "Introduction to Embedded Systems",
+     "credit": 3
+    },
+    {
+     "code": "CSE 472",
+     "title": "Internet of Things (IoT)",
+     "credit": 3
+    },
+    {
+     "code": "CSE 473",
+     "title": "Robotics",
+     "credit": 3
+    },
+    {
+     "code": "CSE 474",
+     "title": "VLSI Design",
+     "credit": 3
+    },
+    {
+     "code": "CSE 475",
+     "title": "Micro-sensors",
+     "credit": 3
+    },
+    {
+     "code": "CSE 476",
+     "title": "Sensor Manufacturing and Process Control",
+     "credit": 3
+    },
+    {
+     "code": "CSE 477",
+     "title": "Introduction to Nanotechnology and Nanodevices",
+     "credit": 3
+    },
+    {
+     "code": "CSE 478",
+     "title": "Additive Manufacturing Engineering",
+     "credit": 3
+    },
+    {
+     "code": "CSE 498",
+     "title": "FYDP/Capstone Project (Phase I)",
+     "credit": 3
+    },
+    {
+     "code": "CSE 499",
+     "title": "FYDP/Capstone Project (Phase II)",
+     "credit": 3
+    },
+    {
+     "code": "ECO 426",
+     "title": "Engineering Economics",
+     "credit": 3
+    },
+    {
+     "code": "ENG 101",
+     "title": "Basic Functional English and English Spoken",
+     "credit": 3
+    },
+    {
+     "code": "ENG 102",
+     "title": "Writing and Comprehension",
+     "credit": 3
+    },
+    {
+     "code": "ENG 113",
+     "title": "Basic Functional English and English Spoken",
+     "credit": 3
+    },
+    {
+     "code": "GED 121",
+     "title": "Bangladesh Studies",
+     "credit": 3
+    },
+    {
+     "code": "MAT 101",
+     "title": "Mathematics-I",
+     "credit": 3
+    },
+    {
+     "code": "MAT 102",
+     "title": "Mathematics-II: Calculus, Complex Variables & Linear Algebra",
+     "credit": 3
+    },
+    {
+     "code": "MAT 111",
+     "title": "Basic Mathematics",
+     "credit": 3
+    },
+    {
+     "code": "MAT 121",
+     "title": "Mathematics-II Calculus ,Complex",
+     "credit": 3
+    },
+    {
+     "code": "MAT 211",
+     "title": "Engineering Mathematics",
+     "credit": 3
+    },
+    {
+     "code": "PHY 101",
+     "title": "Physics-I",
+     "credit": 3
+    },
+    {
+     "code": "PHY 102",
+     "title": "Physics-II",
+     "credit": 3
+    },
+    {
+     "code": "PHY 103",
+     "title": "Physics-II Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "STA 101",
+     "title": "Statistics and Probability",
+     "credit": 3
+    }
+   ]
+  },
+  "CIS": {
+   "name": "Computing and Information System",
+   "program": "B.Sc. in Computing and Information System",
+   "courses": [
+    {
+     "code": "ACC 213",
+     "title": "Accounting",
+     "credit": 3
+    },
+    {
+     "code": "AOL 101",
+     "title": "Art of Living",
+     "credit": 3
+    },
+    {
+     "code": "BNS 101",
+     "title": "Bangladesh Studies",
+     "credit": 3
+    },
+    {
+     "code": "CIS 115",
+     "title": "Structured Programming",
+     "credit": 3
+    },
+    {
+     "code": "CIS 115L",
+     "title": "Structured Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 121",
+     "title": "Introduction to Industry 4.0",
+     "credit": 3
+    },
+    {
+     "code": "CIS 122",
+     "title": "Data Structure",
+     "credit": 3
+    },
+    {
+     "code": "CIS 122L",
+     "title": "Data Structure Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 123",
+     "title": "Discrete Mathematics",
+     "credit": 3
+    },
+    {
+     "code": "CIS 133",
+     "title": "Website Development Essentials",
+     "credit": 3
+    },
+    {
+     "code": "CIS 133L",
+     "title": "Website Development Essentials Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 211",
+     "title": "Computer Network",
+     "credit": 3
+    },
+    {
+     "code": "CIS 211L",
+     "title": "Computer Network Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 216",
+     "title": "Object Oriented Programming",
+     "credit": 3
+    },
+    {
+     "code": "CIS 216L",
+     "title": "Object Oriented Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 222",
+     "title": "Database Management System",
+     "credit": 3
+    },
+    {
+     "code": "CIS 222L",
+     "title": "Database Management System Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 231",
+     "title": "Information System Analysis",
+     "credit": 3
+    },
+    {
+     "code": "CIS 311",
+     "title": "Network Security and Cryptography",
+     "credit": 3
+    },
+    {
+     "code": "CIS 311L",
+     "title": "Network Security and Cryptography Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 312",
+     "title": "Big Data Analytics and Applications",
+     "credit": 3
+    },
+    {
+     "code": "CIS 313",
+     "title": "Artificial Intelligence",
+     "credit": 3
+    },
+    {
+     "code": "CIS 313L",
+     "title": "Artificial Intelligence Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 323",
+     "title": "Information System Architecture and Planning",
+     "credit": 3
+    },
+    {
+     "code": "CIS 323L",
+     "title": "Information System Architecture and Planning Lab",
+     "credit": 1
+    },
+    {
+     "code": "CIS 414",
+     "title": "Information System Management",
+     "credit": 3
+    },
+    {
+     "code": "CIS 431",
+     "title": "Software Quality Assurance and Testing",
+     "credit": 3
+    },
+    {
+     "code": "CIS 435",
+     "title": "Cloud Computing",
+     "credit": 3
+    },
+    {
+     "code": "CIS 499",
+     "title": "Project (Phase II)",
+     "credit": 6
+    },
+    {
+     "code": "COF 101",
+     "title": "Computer Fundamentals",
+     "credit": 3
+    },
+    {
+     "code": "ENG 101",
+     "title": "English Language I",
+     "credit": 3
+    },
+    {
+     "code": "ENG 102",
+     "title": "English Language II",
+     "credit": 3
+    },
+    {
+     "code": "MGT 413",
+     "title": "Industrial Management",
+     "credit": 3
+    }
+   ]
+  },
+  "ITM": {
+   "name": "Information Technology and Management",
+   "program": "B.Sc. in Information Technology and Management",
+   "courses": [
+    {
+     "code": "AOL 101",
+     "title": "Art of Living",
+     "credit": 3
+    },
+    {
+     "code": "ENG 101",
+     "title": "Basic Functional English",
+     "credit": 3
+    },
+    {
+     "code": "ENG 102",
+     "title": "Business English",
+     "credit": 3
+    },
+    {
+     "code": "GE 515",
+     "title": "Bangla Language and Literature",
+     "credit": 3
+    },
+    {
+     "code": "ITM 101",
+     "title": "Principles of Accounting",
+     "credit": 3
+    },
+    {
+     "code": "ITM 102",
+     "title": "Principles of Management",
+     "credit": 3
+    },
+    {
+     "code": "ITM 103",
+     "title": "Principles of Marketing",
+     "credit": 3
+    },
+    {
+     "code": "ITM 111",
+     "title": "Computer Fundamentals",
+     "credit": 3
+    },
+    {
+     "code": "ITM 112",
+     "title": "Computer Fundamentals Lab",
+     "credit": 1
+    },
+    {
+     "code": "ITM 121",
+     "title": "Structured Programming",
+     "credit": 3
+    },
+    {
+     "code": "ITM 122",
+     "title": "Structured Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "ITM 123",
+     "title": "Software Requirement Analysis and Design",
+     "credit": 3
+    },
+    {
+     "code": "ITM 201",
+     "title": "Managerial Accounting",
+     "credit": 3
+    },
+    {
+     "code": "ITM 202",
+     "title": "Business Communication",
+     "credit": 3
+    },
+    {
+     "code": "ITM 203",
+     "title": "Social Media Marketing",
+     "credit": 3
+    },
+    {
+     "code": "ITM 204",
+     "title": "Human resource management",
+     "credit": 3
+    },
+    {
+     "code": "ITM 206",
+     "title": "Entrepreneurship in IT",
+     "credit": 3
+    },
+    {
+     "code": "ITM 211",
+     "title": "HCI and User Experience",
+     "credit": 3
+    },
+    {
+     "code": "ITM 213",
+     "title": "Object Oriented Concepts",
+     "credit": 3
+    },
+    {
+     "code": "ITM 214",
+     "title": "Object Oriented Concepts Lab",
+     "credit": 1
+    },
+    {
+     "code": "ITM 217",
+     "title": "Data Structure and Algorithm",
+     "credit": 3
+    },
+    {
+     "code": "ITM 218",
+     "title": "Data Structure and Algorithm Lab",
+     "credit": 1
+    },
+    {
+     "code": "ITM 221",
+     "title": "Database Management System",
+     "credit": 3
+    },
+    {
+     "code": "ITM 222",
+     "title": "Database Management System Lab",
+     "credit": 1
+    },
+    {
+     "code": "ITM 223",
+     "title": "Website Application Development",
+     "credit": 3
+    },
+    {
+     "code": "ITM 224",
+     "title": "Website Application Development Lab",
+     "credit": 1
+    },
+    {
+     "code": "ITM 301",
+     "title": "Management Information System",
+     "credit": 3
+    },
+    {
+     "code": "ITM 302",
+     "title": "Business and Web Analytics",
+     "credit": 3
+    },
+    {
+     "code": "ITM 304",
+     "title": "Production and Operation management",
+     "credit": 3
+    },
+    {
+     "code": "ITM 307",
+     "title": "Introduction to Finance",
+     "credit": 3
+    },
+    {
+     "code": "ITM 315",
+     "title": "Data Communication and Computer Networking",
+     "credit": 3
+    },
+    {
+     "code": "ITM 316",
+     "title": "Data Communication and Computer Networking Lab",
+     "credit": 1
+    },
+    {
+     "code": "ITM 401",
+     "title": "Research Methodology",
+     "credit": 3
+    },
+    {
+     "code": "ITM 409",
+     "title": "Project Management",
+     "credit": 3
+    },
+    {
+     "code": "ITM 418",
+     "title": "Distributed System and Cloud Computing",
+     "credit": 3
+    },
+    {
+     "code": "ITM 421",
+     "title": "Open Source Software System",
+     "credit": 3
+    },
+    {
+     "code": "ITM 451",
+     "title": "Industrial Placement/",
+     "credit": 6
+    },
+    {
+     "code": "ITM 452",
+     "title": "Thesis/ Project",
+     "credit": 9
+    },
+    {
+     "code": "MATH 101",
+     "title": "Business Mathematics",
+     "credit": 3
+    },
+    {
+     "code": "STA 101",
+     "title": "Introduction to Statistics",
+     "credit": 3
+    }
+   ]
+  },
+  "MCT": {
+   "name": "Multimedia and Creative Technology",
+   "program": "B.Sc. in Multimedia and Creative Technology",
+   "courses": [
+    {
+     "code": "0222-111",
+     "title": "Bangladesh Studies",
+     "credit": 3
+    },
+    {
+     "code": "0223-111",
+     "title": "Art of Living",
+     "credit": 3
+    },
+    {
+     "code": "0231-111",
+     "title": "English I",
+     "credit": 3
+    },
+    {
+     "code": "0541-111",
+     "title": "Mathematics I",
+     "credit": 3
+    },
+    {
+     "code": "0611-111",
+     "title": "Computer Fundamentals",
+     "credit": 3
+    },
+    {
+     "code": "0613-121",
+     "title": "Structured Programming",
+     "credit": 3
+    },
+    {
+     "code": "0613-122",
+     "title": "Structured Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "0613-215",
+     "title": "Object-Oriented Programming",
+     "credit": 3
+    },
+    {
+     "code": "0613-216",
+     "title": "Object-Oriented Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "AOL 201",
+     "title": "Art of Living",
+     "credit": 3
+    },
+    {
+     "code": "CIS 112",
+     "title": "Mathematics-I Fundamentals of",
+     "credit": 3
+    },
+    {
+     "code": "CIS 332",
+     "title": "Human Computer Interaction",
+     "credit": 3
+    },
+    {
+     "code": "CSE 112",
+     "title": "Computer Fundamentals",
+     "credit": 3
+    },
+    {
+     "code": "CSE 122",
+     "title": "Structured Programming",
+     "credit": 3
+    },
+    {
+     "code": "CSE 123",
+     "title": "Structured Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "CSE 414",
+     "title": "Simulation and Modeling",
+     "credit": 3
+    },
+    {
+     "code": "CSE 415",
+     "title": "Simulation and Modeling Lab",
+     "credit": 1
+    },
+    {
+     "code": "CSE 417",
+     "title": "Web Engineering",
+     "credit": 3
+    },
+    {
+     "code": "CSE 418",
+     "title": "Web Engineering Lab",
+     "credit": 1
+    },
+    {
+     "code": "ENG 113",
+     "title": "Basic Functional English and English",
+     "credit": 3
+    },
+    {
+     "code": "ENG 123",
+     "title": "Writing and Comprehension",
+     "credit": 3
+    },
+    {
+     "code": "GED 201",
+     "title": "Bangladesh Studies",
+     "credit": 3
+    },
+    {
+     "code": "MCT 111",
+     "title": "Fundamentals of Graphic Design",
+     "credit": 3
+    },
+    {
+     "code": "MCT 112",
+     "title": "Fundamental of Graphic Design Lab",
+     "credit": 1
+    },
+    {
+     "code": "MCT 113",
+     "title": "Drawing and Sketching",
+     "credit": 3
+    },
+    {
+     "code": "MCT 121",
+     "title": "Principles and Elements of Design",
+     "credit": 3
+    },
+    {
+     "code": "MCT 122",
+     "title": "Principles and Elements of Design with lab",
+     "credit": 1
+    },
+    {
+     "code": "MCT 123",
+     "title": "Composition Study",
+     "credit": 3
+    },
+    {
+     "code": "MCT 124",
+     "title": "Figure Drawing",
+     "credit": 1
+    },
+    {
+     "code": "MCT 133",
+     "title": "Basic Typography Design",
+     "credit": 3
+    },
+    {
+     "code": "MCT 134",
+     "title": "Calligraphy",
+     "credit": 1
+    },
+    {
+     "code": "MCT 135",
+     "title": "Film Studies & Appreciation",
+     "credit": 3
+    },
+    {
+     "code": "MCT 136",
+     "title": "Computer Networks and Internet",
+     "credit": 3
+    },
+    {
+     "code": "MCT 137",
+     "title": "Perspective Study",
+     "credit": 1
+    },
+    {
+     "code": "MCT 211",
+     "title": "2D Animation",
+     "credit": 3
+    },
+    {
+     "code": "MCT 212",
+     "title": "2D Animation lab",
+     "credit": 1
+    },
+    {
+     "code": "MCT 213",
+     "title": "Motion Graphics",
+     "credit": 3
+    },
+    {
+     "code": "MCT 221",
+     "title": "3D Design and Modeling",
+     "credit": 3
+    },
+    {
+     "code": "MCT 222",
+     "title": "3D Design and Modeling Lab",
+     "credit": 1
+    },
+    {
+     "code": "MCT 223",
+     "title": "Mathematics-II Coordinate Geometry",
+     "credit": 3
+    },
+    {
+     "code": "MCT 224",
+     "title": "Brand Design and Packaging",
+     "credit": 3
+    },
+    {
+     "code": "MCT 231",
+     "title": "Object Oriented Programming",
+     "credit": 3
+    },
+    {
+     "code": "MCT 232",
+     "title": "Object Oriented Programming Lab",
+     "credit": 1
+    },
+    {
+     "code": "MCT 233",
+     "title": "Video Production",
+     "credit": 3
+    },
+    {
+     "code": "MCT 311",
+     "title": "Audio and Video Streaming & Editing",
+     "credit": 3
+    },
+    {
+     "code": "MCT 313",
+     "title": "3D Animation 1",
+     "credit": 3
+    },
+    {
+     "code": "MCT 314",
+     "title": "Creative Writing",
+     "credit": 3
+    },
+    {
+     "code": "MCT 315",
+     "title": "3D Environment Design",
+     "credit": 3
+    },
+    {
+     "code": "MCT 321",
+     "title": "Physics Based Animation",
+     "credit": 3
+    },
+    {
+     "code": "MCT 324",
+     "title": "3D Animation 2",
+     "credit": 1
+    },
+    {
+     "code": "MCT 331",
+     "title": "Visual Effects Production",
+     "credit": 3
+    },
+    {
+     "code": "MCT 332",
+     "title": "Graphic Novel",
+     "credit": 3
+    },
+    {
+     "code": "MCT 333",
+     "title": "Character Design & Composition (Z brush)",
+     "credit": 3
+    },
+    {
+     "code": "MCT 334",
+     "title": "Script Programming",
+     "credit": 1
+    },
+    {
+     "code": "MCT 335",
+     "title": "Character Animation Lab",
+     "credit": 1
+    },
+    {
+     "code": "MCT 336",
+     "title": "Texturing",
+     "credit": 1
+    },
+    {
+     "code": "MCT 411",
+     "title": "Digital Matte Painting",
+     "credit": 1
+    },
+    {
+     "code": "MCT 413",
+     "title": "New Typeface Design",
+     "credit": 3
+    },
+    {
+     "code": "MCT 421",
+     "title": "Game Analysis and Development",
+     "credit": 3
+    },
+    {
+     "code": "MCT 422",
+     "title": "Game Analysis and Development lab",
+     "credit": 1
+    },
+    {
+     "code": "MCT 424",
+     "title": "Augmented and Virtual Reality",
+     "credit": 3
+    },
+    {
+     "code": "MCT 431",
+     "title": "Multimedia Authoring",
+     "credit": 3
+    },
+    {
+     "code": "MCT 432",
+     "title": "Digital Cinematography",
+     "credit": 3
+    },
+    {
+     "code": "MCT 433",
+     "title": "Lighting & Rendering Lab",
+     "credit": 1
+    },
+    {
+     "code": "MCT 450",
+     "title": "Lighting and Rendering",
+     "credit": 3
+    },
+    {
+     "code": "MCT 451",
+     "title": "Character Animation",
+     "credit": 3
+    },
+    {
+     "code": "MCT 499",
+     "title": "Final Project",
+     "credit": 6
+    },
+    {
+     "code": "MIS 575",
+     "title": "Project Management",
+     "credit": 3
+    }
+   ]
+  },
+  "ICE": {
+   "name": "Information and Communication Engineering",
+   "program": "B.Sc. in Information and Communication Engineering",
+   "courses": [
+    {
+     "code": "GED 1011",
+     "title": "History of Emergence Bangladesh",
+     "credit": 3
+    },
+    {
+     "code": "GED 1012",
+     "title": "Art of Living and Engineering Ethics",
+     "credit": 3
+    },
+    {
+     "code": "HUM 1011",
+     "title": "ICT Economics and Accounting",
+     "credit": 3
+    },
+    {
+     "code": "ICE 1141",
+     "title": "Computer Fundamentals",
+     "credit": 3
+    },
+    {
+     "code": "ICE 1143",
+     "title": "Structured Programming",
+     "credit": 3
+    },
+    {
+     "code": "ICE 1144",
+     "title": "Structured Programming Laboratory",
+     "credit": 1
+    },
+    {
+     "code": "ICE 1247",
+     "title": "Object Oriented Programming",
+     "credit": 3
+    },
+    {
+     "code": "ICE 1248",
+     "title": "Object Oriented Programming Laboratory",
+     "credit": 1
+    },
+    {
+     "code": "MAT 1031",
+     "title": "Mathematics I:Calculas and Ordinary Differential Equations",
+     "credit": 3
+    },
+    {
+     "code": "MAT 1033",
+     "title": "Mathematics II: Complex variable, Linear Algebra and Matrices",
+     "credit": 3
+    }
+   ]
+  },
+  "CE": {
+   "name": "Civil Engineering",
+   "program": "B.Sc. in Civil Engineering",
+   "courses": [
+    {
+     "code": "CSE 100",
+     "title": "Computer Fundamentals Lab",
+     "credit": 1.5
+    },
+    {
+     "code": "MAT 101",
+     "title": "Differential and Integral Calculus",
+     "credit": 3
+    },
+    {
+     "code": "PHY 101",
+     "title": "Physical Optics, Waves and Oscillation, Heat and Thermodynamics",
+     "credit": 3
+    }
+   ]
+  }
+ },
+ "mappings": [
+  {
+   "src_dept": "ICE",
+   "src": "ICE 1141",
+   "tgt_dept": "SWE",
+   "tgt": "SE 111"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "GED 1011",
+   "tgt_dept": "SWE",
+   "tgt": "BNS 101"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "MAT 1031",
+   "tgt_dept": "SWE",
+   "tgt": "MAT 101"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "MAT 1033",
+   "tgt_dept": "SWE",
+   "tgt": "MAT 102"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "GED 1012",
+   "tgt_dept": "SWE",
+   "tgt": "AOL 101"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "ICE 1247",
+   "tgt_dept": "SWE",
+   "tgt": "SE 216"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "ICE 1248",
+   "tgt_dept": "SWE",
+   "tgt": "SE 217"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "ICE 1143",
+   "tgt_dept": "SWE",
+   "tgt": "SE 121"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "HUM 1011",
+   "tgt_dept": "SWE",
+   "tgt": "GE 235"
+  },
+  {
+   "src_dept": "ICE",
+   "src": "ICE 1144",
+   "tgt_dept": "SWE",
+   "tgt": "SE 122"
+  },
+  {
+   "src_dept": "ITM",
+   "src": "ENG 101",
+   "tgt_dept": "SWE",
+   "tgt": "ENG 101"
+  },
+  {
+   "src_dept": "ITM",
+   "src": "ITM 101",
+   "tgt_dept": "SWE",
+   "tgt": "GE 235"
+  },
+  {
+   "src_dept": "ITM",
+   "src": "ITM 111",
+   "tgt_dept": "SWE",
+   "tgt": "SE 111"
+  },
+  {
+   "src_dept": "ITM",
+   "src": "ITM 112",
+   "tgt_dept": "SWE",
+   "tgt": "SE 112"
+  },
+  {
+   "src_dept": "ITM",
+   "src": "AOL 101",
+   "tgt_dept": "SWE",
+   "tgt": "AOL 101"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "CSE 112",
+   "tgt_dept": "SWE",
+   "tgt": "SE 111"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "CSE 122",
+   "tgt_dept": "SWE",
+   "tgt": "SE 121"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "CSE 123",
+   "tgt_dept": "SWE",
+   "tgt": "SE 122"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "ENG 113",
+   "tgt_dept": "SWE",
+   "tgt": "ENG 101"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "GED 121",
+   "tgt_dept": "SWE",
+   "tgt": "BNS 101"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "MAT 121",
+   "tgt_dept": "SWE",
+   "tgt": "MAT 102"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "MAT 111",
+   "tgt_dept": "SWE",
+   "tgt": "MAT 101"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0223-111",
+   "tgt_dept": "SWE",
+   "tgt": "AOL 101"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0613-121",
+   "tgt_dept": "SWE",
+   "tgt": "SE 121"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0613-122",
+   "tgt_dept": "SWE",
+   "tgt": "SE 122"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0613-215",
+   "tgt_dept": "SWE",
+   "tgt": "SE 216"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0613-216",
+   "tgt_dept": "SWE",
+   "tgt": "SE 217"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0541-111",
+   "tgt_dept": "SWE",
+   "tgt": "MAT 101"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0222-111",
+   "tgt_dept": "SWE",
+   "tgt": "BNS 101"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0231-111",
+   "tgt_dept": "SWE",
+   "tgt": "ENG 101"
+  },
+  {
+   "src_dept": "MCT",
+   "src": "0611-111",
+   "tgt_dept": "SWE",
+   "tgt": "SE 111"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "CSE 113",
+   "tgt_dept": "SWE",
+   "tgt": "SE 121"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "CSE 114",
+   "tgt_dept": "SWE",
+   "tgt": "SE 122"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "ENG 101",
+   "tgt_dept": "SWE",
+   "tgt": "ENG 101"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "PHY 101",
+   "tgt_dept": "SWE",
+   "tgt": "PHY 101"
+  },
+  {
+   "src_dept": "CSE",
+   "src": "MAT 101",
+   "tgt_dept": "SWE",
+   "tgt": "MAT 101"
+  },
+  {
+   "src_dept": "CE",
+   "src": "PHY 101",
+   "tgt_dept": "SWE",
+   "tgt": "PHY 101"
+  },
+  {
+   "src_dept": "CE",
+   "src": "MAT 101",
+   "tgt_dept": "SWE",
+   "tgt": "MAT 101"
+  },
+  {
+   "src_dept": "CE",
+   "src": "CSE 100",
+   "tgt_dept": "SWE",
+   "tgt": "SE 112"
+  }
+ ]
+}

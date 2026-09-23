@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --color-brand: #2b5bea;
+  --color-brand-ink: #1d44b8;
+  --color-brand-soft: #eaf0ff;
+  --color-navy: #0f1b3d;
+  --color-canvas: #f3f5fa;
+  --color-line: #e3e7ef;
+  --color-line-strong: #cfd6e3;
+}
+
+@layer components {
+  .card { @apply mb-5 rounded-xl border border-line bg-white shadow-sm; }
+  .card-h { @apply flex flex-wrap items-center gap-2.5 border-b border-line px-5 py-4; }
+  .card-title { @apply text-[15px] font-semibold; }
+  .step { @apply grid size-6 place-items-center rounded-full bg-brand-soft text-xs font-bold text-brand; }
+  .label { @apply mb-1.5 block text-[13px] font-medium text-gray-700; }
+  .field {
+    @apply h-[38px] w-full rounded-lg border border-line-strong bg-white px-3 text-gray-900 transition
+      focus:border-brand focus:ring-3 focus:ring-brand/15 focus:outline-none
+      user-invalid:border-red-600 user-invalid:ring-3 user-invalid:ring-red-600/10;
+  }
+  select.field {
+    @apply appearance-none bg-no-repeat pr-8;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 10px center;
+  }
+  .cell { @apply h-[34px] px-2.5 data-unknown:border-amber-300 data-unknown:bg-amber-50; }
+  .btn {
+    @apply inline-flex h-9 cursor-pointer items-center justify-center gap-1.5 rounded-lg border border-line-strong bg-white px-3.5 font-medium text-gray-900 no-underline transition
+      hover:bg-gray-50 focus-visible:outline-3 focus-visible:outline-offset-1 focus-visible:outline-brand/35;
+  }
+  .btn-primary { @apply border-brand bg-brand text-white hover:bg-brand-ink; }
+  .btn-soft { @apply border-transparent bg-brand-soft text-brand hover:bg-[#dce6ff]; }
+  .btn-icon { @apply w-8 border-transparent bg-transparent px-0 text-gray-500 hover:bg-red-50 hover:text-red-600; }
+  .th { @apply border-b border-line bg-[#fafbfe] px-1.5 py-2.5 text-left text-[11px] font-semibold tracking-wide text-gray-500 uppercase; }
+  .td { @apply border-b border-line px-1.5 py-2 align-middle; }
+  .icon { @apply size-4 flex-none; }
+}
