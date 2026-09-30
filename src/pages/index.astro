@@ -237,10 +237,17 @@ import catalog from "../data/catalog.json";
             <span class="step">3</span><h2 class="card-title">
               Course equivalences
             </h2>
-            <button type="button" class="btn btn-soft ml-auto" id="suggest"
-              ><svg class="icon"><use href="#i-spark"></use></svg>Auto-fill from
-              past certificates</button
-            >
+            <div class="ml-auto flex flex-wrap gap-2">
+              <button type="button" class="btn btn-soft" id="scan"
+                ><svg class="icon"><use href="#i-doc"></use></svg>Scan
+                transcript</button
+              >
+              <button type="button" class="btn btn-soft" id="suggest"
+                ><svg class="icon"><use href="#i-spark"></use></svg>Auto-fill
+                from past certificates</button
+              >
+              <input type="file" id="scan_file" accept="image/*,application/pdf" hidden />
+            </div>
           </div>
           <div
             class="flex flex-wrap items-center gap-3 border-b border-line bg-[#fafbfe] px-5 py-3.5"
@@ -554,6 +561,7 @@ import catalog from "../data/catalog.json";
         type Cert as CertData,
       } from "../lib/certgen.ts";
       import { buildPdf, type Logo, type Measure } from "../lib/pdf.ts";
+      import { parseTranscript } from "../lib/transcript.ts";
 
       type Course = { code: string; title: string; credit: number };
       type Dept = { name: string; program: string; courses: Course[] };
@@ -720,6 +728,54 @@ import catalog from "../data/catalog.json";
       );
 
       $("add").onclick = () => addRow().querySelector("input")!.focus();
+      // drop the empty starter row, if that's all there is
+      function dropEmptyRows() {
+        all("#rows tr").forEach((tr) => {
+          if (
+            !all("input", tr).some((i) => i.value && i.dataset.k !== "matching")
+          )
+            tr.remove();
+        });
+      }
+
+      $("scan").onclick = () => $("scan_file").click();
+      $("scan_file").onchange = async (e: Event) => {
+        const input = e.target as HTMLInputElement,
+          file = input.files?.[0];
+        input.value = "";
+        if (!file) return;
+        try {
+          status("Reading transcript…");
+          const { fileToText } = await import("../lib/scan.ts");
+          const r = parseTranscript(await fileToText(file, status), DEPTS);
+          if (!r.rows.length)
+            return status(
+              "No courses found. Try a sharper photo or the original PDF.",
+              "error",
+            );
+          if (r.name) $("student_name").value = r.name;
+          if (r.id) $("student_id").value = r.id;
+          if (r.dept) {
+            $("src_key").value = r.dept;
+            setDept("src");
+          }
+          dropEmptyRows();
+          const have = new Set(all("[data-k=src_code]").map((i) => norm(i.value)));
+          r.rows
+            .filter((c) => !have.has(c.code))
+            .forEach((c) => {
+              const tr = addRow(c.code, knownTarget(c.code));
+              (tr.querySelector("[data-k=grade]") as HTMLInputElement).value =
+                c.grade;
+            });
+          const unknown = r.rows.filter((c) => !c.known).length;
+          status(
+            `Found ${r.rows.length} courses${unknown ? `, ${unknown} not in the catalog (highlighted)` : ""}. Check the name, ID, grades and matches before generating.`,
+          );
+        } catch (err) {
+          status(`Couldn't read that file: ${(err as Error).message}`, "error");
+        }
+      };
       $("suggest").onclick = () => {
         const have = new Set(
           all("[data-k=src_code]").map((i) => norm(i.value)),
@@ -730,13 +786,7 @@ import catalog from "../data/catalog.json";
             m.tgt_dept === short($("tgt_key").value) &&
             !have.has(m.src),
         );
-        // drop the empty starter row, if that's all there is
-        all("#rows tr").forEach((tr) => {
-          if (
-            !all("input", tr).some((i) => i.value && i.dataset.k !== "matching")
-          )
-            tr.remove();
-        });
+        dropEmptyRows();
         found.forEach((m) => addRow(m.src, m.tgt));
         status(
           found.length

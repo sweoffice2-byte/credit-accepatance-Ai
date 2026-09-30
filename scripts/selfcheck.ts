@@ -4,6 +4,8 @@ import { readFileSync } from 'node:fs';
 import { readZip, writeZip } from '../src/lib/zip.ts';
 import { buildDocx, validate, type Cert } from '../src/lib/certgen.ts';
 import { buildPdf } from '../src/lib/pdf.ts';
+import { parseTranscript } from '../src/lib/transcript.ts';
+import catalog from '../src/data/catalog.json' with { type: 'json' };
 
 const row = { src_code: 'ICE 1248', src_title: 'OOP Laboratory & <Co> (x)', src_credit: 1, grade: 'A+', tgt_code: 'SE 217', tgt_title: 'Lab (x)', tgt_credit: 1, matching: '80%' };
 const cert: Cert = { student_name: 'Test', student_id: '253-35-731', program: 'B.Sc. in Software Engineering', tgt_dept: 'Software Engineering',
@@ -38,3 +40,19 @@ assert.ok(pdf.includes('(Lab \\(x\\)) Tj'), 'parentheses escaped');
 const xref = Number(pdf.match(/startxref\n(\d+)/)![1]);
 assert.ok(pdf.slice(xref).startsWith('xref'), 'xref offset is exact');
 console.log('generators ok');
+
+// transcript scan
+const t = parseTranscript(`Student Name: Jane Doe  ID: 253 35 731
+CSE 113 Programming and Problem Solving 3.0 A+
+CSE1I4 Programming and Problem-Solving Lab 1.5 B
+CSE 123 Data Structure 3.0 F
+CSE 123 Data Structure 3.0 A-
+CSE 213 Algorithms 3.0 W
+CSE 999 Not A Course 3.0 A
+Total Credits 12.0`, catalog.departments);
+assert.equal(t.name, 'Jane Doe');
+assert.equal(t.id, '253-35-731');
+assert.equal(t.dept, 'CSE');
+assert.deepEqual(t.rows.map(r => `${r.code} ${r.grade}`), ['CSE 113 A+', 'CSE 114 B', 'CSE 123 A-', 'CSE 999 A']);
+assert.deepEqual(t.rows.map(r => r.known), [true, true, true, false]);
+console.log('transcript ok');
