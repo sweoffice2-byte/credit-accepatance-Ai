@@ -28,5 +28,5 @@ export function parseTranscript(text: string, depts: Record<string, Dept>): Scan
     .sort((a, b) => b[1] - a[1]).find(([, n]) => n > 0)?.[0];
   const name = text.match(/^\s*(?:student'?s?\s+)?name(?:\s+of\s+(?:the\s+)?student)?\s*[:\-]\s*(.+?)\s*(?:\b(?:student\s+)?id\b.*)?$/im)?.[1];
   const idm = text.match(/\bid\b\D{0,12}(\d{3})[-\s]?(\d{2})[-\s]?(\d{3,4})\b/i) ?? text.match(/\b(\d{3})-(\d{2})-(\d{3,4})\b/);
-  return { name, id: idm && `${idm[1]}-${idm[2]}-${idm[3]}`, dept, rows };
+  return { name, id: idm ? `${idm[1]}-${idm[2]}-${idm[3]}` : undefined, dept, rows };
 }
