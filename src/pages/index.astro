@@ -116,11 +116,11 @@ import catalog from "../data/catalog.json";
           </p>
         </div>
         <div class="ml-auto flex items-center gap-2.5">
-          <div class="hidden text-right sm:block">
-            <p class="text-[13px] font-semibold">MD OMAIR ADNAN</p>
+          <div class="text-right">
+            <p class="text-xs font-semibold sm:text-[13px]">MD OMAIR ADNAN</p>
             <a
               href="mailto:sweoffice2@daffodilvarsity.edu.bd"
-              class="text-xs text-[#a9b4d0] hover:text-white"
+              class="hidden text-xs text-[#a9b4d0] hover:text-white sm:block"
               >sweoffice2@daffodilvarsity.edu.bd</a
             >
           </div>
@@ -259,10 +259,6 @@ import catalog from "../data/catalog.json";
               <button type="button" class="btn btn-soft" id="scan"
                 ><svg class="icon"><use href="#i-doc"></use></svg>Scan
                 transcript</button
-              >
-              <button type="button" class="btn btn-soft" id="suggest"
-                ><svg class="icon"><use href="#i-spark"></use></svg>Auto-fill
-                from past certificates</button
               >
               <input type="file" id="scan_file" accept="image/*,application/pdf" hidden />
             </div>
@@ -442,6 +438,22 @@ import catalog from "../data/catalog.json";
         </section>
       </aside>
     </form>
+
+    <footer class="mx-auto flex max-w-[1440px] items-center gap-3 px-4 pb-8 sm:px-6">
+      <img
+        src={`${import.meta.env.BASE_URL}omair.jpeg`.replace("//", "/")}
+        alt="MD OMAIR ADNAN"
+        class="size-11 rounded-full object-cover"
+      />
+      <div class="min-w-0 text-[13px]">
+        <p class="font-semibold">MD OMAIR ADNAN</p>
+        <a
+          href="mailto:sweoffice2@daffodilvarsity.edu.bd"
+          class="block break-all text-gray-500 hover:text-brand"
+          >sweoffice2@daffodilvarsity.edu.bd</a
+        >
+      </div>
+    </footer>
 
     <datalist id="src_dl"></datalist>
     <datalist id="tgt_dl"></datalist>
@@ -793,24 +805,6 @@ import catalog from "../data/catalog.json";
         } catch (err) {
           status(`Couldn't read that file: ${(err as Error).message}`, "error");
         }
-      };
-      $("suggest").onclick = () => {
-        const have = new Set(
-          all("[data-k=src_code]").map((i) => norm(i.value)),
-        );
-        const found = CAT.mappings.filter(
-          (m) =>
-            m.src_dept === short($("src_key").value) &&
-            m.tgt_dept === short($("tgt_key").value) &&
-            !have.has(m.src),
-        );
-        dropEmptyRows();
-        found.forEach((m) => addRow(m.src, m.tgt));
-        status(
-          found.length
-            ? `Added ${found.length} course${found.length > 1 ? "s" : ""} from past certificates.`
-            : "No past certificates for this department pair yet.",
-        );
       };
       ["src_short", "tgt_short"].forEach((id) =>
         $(id).addEventListener("input", headers),
